@@ -13,9 +13,8 @@ open class Constants: NSObject {
     }
 
     public struct Marvel {
-        public static let PublicKey = "b341288a7e0a40b3e487ef4d0b4dabf6"
-        public static let PraviteKey = "090b24756dee13579474371f2336515f17e39e38"
-        public static let hash = "1090b24756dee13579474371f2336515f17e39e38b341288a7e0a40b3e487ef4d0b4dabf6"
+        public static let PublicKey = "Your_Public_Key"
+        public static let PraviteKey = "Your_Private_key"
     }
     
     public struct WebService {
