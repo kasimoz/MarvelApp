@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvengeroRegular.ttf">
+            <string>Avengero</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Characters View Controller-->
+        <scene sceneID="sCp-ju-ioJ">
+            <objects>
+                <tableViewController storyboardIdentifier="CharactersViewController" id="YML-FQ-BCK" customClass="CharactersViewController" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Zt8-l9-e8I">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="separatorColor" systemColor="systemRedColor"/>
+                        <inset key="separatorInset" minX="100" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="78h-yi-d48">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="78h-yi-d48" id="K4n-LA-z7w">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YML-FQ-BCK" id="zgE-hQ-2rm"/>
+                            <outlet property="delegate" destination="YML-FQ-BCK" id="YBb-CU-kte"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="22J-6n-QBF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500" y="70"/>
+        </scene>
+        <!--Favorite Characters View Controller-->
+        <scene sceneID="2r2-rD-x3d">
+            <objects>
+                <tableViewController storyboardIdentifier="FavoriteCharactersViewController" id="E0R-WG-IDN" customClass="FavoriteCharactersViewController" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="SxV-NY-8Wu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="hhB-oF-3OI">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qs2-va-fKg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <items>
+                                        <navigationItem title="Title" id="frp-gN-3wd"/>
+                                    </items>
+                                </navigationBar>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="E0R-WG-IDN" id="2p5-7D-Tff"/>
+                            <outlet property="delegate" destination="E0R-WG-IDN" id="kvF-RG-wAE"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="navigationBar" destination="qs2-va-fKg" id="jTy-JR-NrV"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TKR-O3-Ufh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500" y="803"/>
+        </scene>
+        <!--Character Detail View Controller-->
+        <scene sceneID="fbR-2a-DS7">
+            <objects>
+                <viewController storyboardIdentifier="CharacterDetailViewController" id="GyP-Hd-Wat" customClass="CharacterDetailViewController" customModule="MarvelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8nJ-ij-UJR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="va0-y1-5pf">
+                                <rect key="frame" x="0.0" y="596" width="414" height="266"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="266" id="xHN-1h-Itp"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4Zi-gr-duD">
+                                    <size key="itemSize" width="90" height="250"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GyP-Hd-Wat" id="fyQ-Il-AKv"/>
+                                    <outlet property="delegate" destination="GyP-Hd-Wat" id="1MR-xH-9Qu"/>
+                                </connections>
+                            </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="daQ-eT-frI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="516.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0s-Yv-qpn">
+                                <rect key="frame" x="8" y="568.5" width="65.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Avengero" family="Avengero" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfF-9X-YfX">
+                                <rect key="frame" x="108" y="529.5" width="290" height="15"/>
+                                <fontDescription key="fontDescription" name="Avengero" family="Avengero" pointSize="10"/>
+                                <color key="textColor" red="0.93333333330000001" green="0.23137254900000001" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEa-Ra-kiM">
+                                <rect key="frame" x="108" y="487.5" width="290" height="26"/>
+                                <fontDescription key="fontDescription" name="Avengero" family="Avengero" pointSize="18"/>
+                                <color key="textColor" red="0.93333333330000001" green="0.23137254900000001" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DMp-km-mFX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="va0-y1-5pf" firstAttribute="leading" secondItem="DMp-km-mFX" secondAttribute="leading" id="0P3-SC-dKb"/>
+                            <constraint firstItem="va0-y1-5pf" firstAttribute="bottom" secondItem="DMp-km-mFX" secondAttribute="bottom" id="7cG-MS-G7I"/>
+                            <constraint firstItem="DMp-km-mFX" firstAttribute="trailing" secondItem="VEa-Ra-kiM" secondAttribute="trailing" constant="16" id="AsG-8S-zju"/>
+                            <constraint firstItem="daQ-eT-frI" firstAttribute="leading" secondItem="DMp-km-mFX" secondAttribute="leading" id="GPG-Qa-ono"/>
+                            <constraint firstItem="va0-y1-5pf" firstAttribute="trailing" secondItem="DMp-km-mFX" secondAttribute="trailing" id="KxB-0b-loA"/>
+                            <constraint firstItem="VEa-Ra-kiM" firstAttribute="width" secondItem="8nJ-ij-UJR" secondAttribute="width" multiplier="0.7" id="RQ1-uI-3AJ"/>
+                            <constraint firstItem="c0s-Yv-qpn" firstAttribute="leading" secondItem="DMp-km-mFX" secondAttribute="leading" constant="8" id="T5F-Hr-api"/>
+                            <constraint firstItem="va0-y1-5pf" firstAttribute="top" secondItem="c0s-Yv-qpn" secondAttribute="bottom" constant="8" id="foE-AI-h66"/>
+                            <constraint firstItem="SfF-9X-YfX" firstAttribute="top" secondItem="VEa-Ra-kiM" secondAttribute="bottom" constant="16" id="mav-bt-5nZ"/>
+                            <constraint firstItem="daQ-eT-frI" firstAttribute="trailing" secondItem="DMp-km-mFX" secondAttribute="trailing" id="n45-G9-Iba"/>
+                            <constraint firstItem="c0s-Yv-qpn" firstAttribute="top" secondItem="daQ-eT-frI" secondAttribute="bottom" constant="8" id="tFl-Rr-Ntq"/>
+                            <constraint firstItem="DMp-km-mFX" firstAttribute="trailing" secondItem="SfF-9X-YfX" secondAttribute="trailing" constant="16" id="uSS-Uv-Pzy"/>
+                            <constraint firstItem="SfF-9X-YfX" firstAttribute="bottom" secondItem="daQ-eT-frI" secondAttribute="bottom" constant="-16" id="vki-de-npr"/>
+                            <constraint firstItem="daQ-eT-frI" firstAttribute="top" secondItem="DMp-km-mFX" secondAttribute="top" id="wqa-Wz-pGf"/>
+                            <constraint firstItem="SfF-9X-YfX" firstAttribute="width" secondItem="8nJ-ij-UJR" secondAttribute="width" multiplier="0.7" id="zj3-ZR-lxU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="comicsCollectionView" destination="va0-y1-5pf" id="ety-Tq-acT"/>
+                        <outlet property="imgAvatar" destination="daQ-eT-frI" id="OEM-hV-HFh"/>
+                        <outlet property="lblDescription" destination="SfF-9X-YfX" id="MrE-nk-tQ1"/>
+                        <outlet property="lblName" destination="VEa-Ra-kiM" id="Yx6-K0-r8P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9YO-5m-RHP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1276.8115942028987" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

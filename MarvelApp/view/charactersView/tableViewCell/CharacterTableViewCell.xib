@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvengeroRegular.ttf">
+            <string>Avengero</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="CharacterTableViewCell" rowHeight="94" id="KGk-i7-Jjw" customClass="CharacterTableViewCell" customModule="MarvelApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="413.5" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vbd-qR-3Cy">
+                        <rect key="frame" x="10" y="10" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="Hyr-fS-H1r"/>
+                            <constraint firstAttribute="height" constant="80" id="zyC-af-Ok1"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgP-Hv-sWX">
+                        <rect key="frame" x="98" y="40.5" width="315.5" height="19.5"/>
+                        <fontDescription key="fontDescription" name="Avengero" family="Avengero" pointSize="14"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" highlightedImage="star.fill" translatesAutoresizingMaskIntoConstraints="NO" id="vM7-fw-COO">
+                        <rect key="frame" x="383.5" y="33.5" width="22" height="32"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="HSF-Fz-4HK"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Vbd-qR-3Cy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="29T-Dr-idX"/>
+                    <constraint firstItem="zgP-Hv-sWX" firstAttribute="leading" secondItem="Vbd-qR-3Cy" secondAttribute="trailing" constant="8" symbolic="YES" id="Flm-wj-X1q"/>
+                    <constraint firstAttribute="trailing" secondItem="vM7-fw-COO" secondAttribute="trailing" constant="8" id="QD4-gL-UP5"/>
+                    <constraint firstItem="zgP-Hv-sWX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="XTI-Mx-1jG"/>
+                    <constraint firstItem="vM7-fw-COO" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="g9p-UJ-T7z"/>
+                    <constraint firstAttribute="trailing" secondItem="zgP-Hv-sWX" secondAttribute="trailing" id="jLq-xR-pC8"/>
+                    <constraint firstAttribute="bottom" secondItem="Vbd-qR-3Cy" secondAttribute="bottom" constant="10" id="oPc-lb-YgR"/>
+                    <constraint firstItem="Vbd-qR-3Cy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="pdd-Ie-7D8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="tintColor" red="0.93333333330000001" green="0.23137254900000001" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="imgAvatar" destination="Vbd-qR-3Cy" id="Lme-CG-Dy8"/>
+                <outlet property="imgFavorite" destination="vM7-fw-COO" id="rip-An-RXH"/>
+                <outlet property="lblName" destination="zgP-Hv-sWX" id="iQx-jk-ias"/>
+            </connections>
+            <point key="canvasLocation" x="226.81159420289856" y="99.107142857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

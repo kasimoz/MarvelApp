@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvengeroRegular.ttf">
+            <string>Avengero</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="FavoriteTableViewCell" rowHeight="80" id="V2l-hK-Ic5" customClass="FavoriteTableViewCell" customModule="MarvelApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V2l-hK-Ic5" id="aZU-s7-JDc">
+                <rect key="frame" x="0.0" y="0.0" width="443" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wGf-gZ-2KU">
+                        <rect key="frame" x="10" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="0O1-Dq-CD7"/>
+                            <constraint firstAttribute="width" constant="60" id="V1R-GV-kOb"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ac6-JE-gLs">
+                        <rect key="frame" x="78" y="10" width="365" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="WIQ-hM-1DT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Avengero" family="Avengero" pointSize="12"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6d-cV-MdA">
+                        <rect key="frame" x="78" y="32" width="365" height="38"/>
+                        <fontDescription key="fontDescription" name="Avengero" family="Avengero" pointSize="10"/>
+                        <color key="textColor" systemColor="systemGray2Color"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="J6d-cV-MdA" secondAttribute="trailing" id="370-Ws-D83"/>
+                    <constraint firstAttribute="trailing" secondItem="Ac6-JE-gLs" secondAttribute="trailing" id="3e2-9H-IHM"/>
+                    <constraint firstItem="Ac6-JE-gLs" firstAttribute="top" secondItem="aZU-s7-JDc" secondAttribute="top" constant="10" id="8To-90-N3g"/>
+                    <constraint firstItem="J6d-cV-MdA" firstAttribute="top" secondItem="Ac6-JE-gLs" secondAttribute="bottom" constant="4" id="RHc-Ev-VDC"/>
+                    <constraint firstItem="wGf-gZ-2KU" firstAttribute="top" secondItem="aZU-s7-JDc" secondAttribute="top" constant="10" id="WVF-f7-j07"/>
+                    <constraint firstAttribute="bottom" secondItem="J6d-cV-MdA" secondAttribute="bottom" constant="10" id="YiM-fT-eDd"/>
+                    <constraint firstAttribute="bottom" secondItem="wGf-gZ-2KU" secondAttribute="bottom" constant="10" id="Zwg-Mk-nKc"/>
+                    <constraint firstItem="Ac6-JE-gLs" firstAttribute="leading" secondItem="wGf-gZ-2KU" secondAttribute="trailing" constant="8" symbolic="YES" id="s5r-dz-dD1"/>
+                    <constraint firstItem="J6d-cV-MdA" firstAttribute="leading" secondItem="wGf-gZ-2KU" secondAttribute="trailing" constant="8" symbolic="YES" id="ygh-F3-1JO"/>
+                    <constraint firstItem="wGf-gZ-2KU" firstAttribute="leading" secondItem="aZU-s7-JDc" secondAttribute="leading" constant="10" id="z5v-4E-DXm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="K5l-ZI-5R5"/>
+            <color key="tintColor" red="0.93333333330000001" green="0.23137254900000001" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="imgAvatar" destination="wGf-gZ-2KU" id="Yx1-YX-H0Y"/>
+                <outlet property="lblDescription" destination="J6d-cV-MdA" id="RHa-k2-eAh"/>
+                <outlet property="lblName" destination="Ac6-JE-gLs" id="x4h-aj-geu"/>
+            </connections>
+            <point key="canvasLocation" x="226.81159420289856" y="92.410714285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
